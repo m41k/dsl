@@ -1,0 +1,27 @@
+<html>
+ <body>
+  <table width="100%" border=0>
+   <tr>
+    <td width="70%">
+<pre>
+<textarea name='texto' rows='25' cols='70' style='background-color: #FFFFFF; color: #000000; border: none;'>
+
+<?php
+$sh = getcwd().'/dslbr.sh';
+$source = file($sh);
+foreach($source as $texto) {
+echo $texto;
+}
+?>
+
+</textarea></pre></td>
+
+    <td valign='top'>
+      <hr>Download <hr>
+      <a href="dslbr.sh">dslbr.sh</a>
+    </td>   
+   </tr>         
+  </table>
+
+ </body>
+</html>

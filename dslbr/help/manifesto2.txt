@@ -1,0 +1,72 @@
+Sobre o Projeto [ Maik ]
+Lista de Sugestões
+
+- Validação dos campos do formulário na hora do envio (Server Side)
+- Pequeno Label com exemplo do conteúdo do campo a ser inserido.
+- Validação para ser enviado (digitar números randômicos que aparecem em imagens)
+Obs.: Evita que o banco seja comprometido por spammers e outros "perigos digitais"
+- No campo de versão do DSL seria bacana ser exibido com ComboBox (Com as versões do Damn Small que realmente existem. Caso contrário qualquer coisa que eu digite será válido como versão)
+
+Obs.: Não sei os outros, mas estes arquivos vão ser instalados em meu sistema e não vejo proteção no que diz respeito e extensões e/ou conteúdo. Afinal de contas estamos falando de programas (Scripts LUA)...
+
+Perguntas
+
+- Qualquer tipo de arquivo traduzido pode ser postado ou só scripts LUA? (Binários também?)
+
+- Como garantir a integridade dos arquivos? Eles são enviados por qualquer um, não passam pro um processo/grupo de avaliação e são instalados direto na maquina. Nós estamos falando de códigos fonte e levando em conta LUA que é uma linguagem de considerável porte, qualquer coisa pode ser “embebida” em um código.
+
+- Tirando a questão de segurança. O que garantirá a qualidade da tradução?
+Estive em contato com o mantedor e desenvolvedor do Puppy Linux BR e em um episódio isolado um contribuinte decidiu ajudá-lo com a tradução de um script.
+Encurtando a história... o cara passou o script por um tradutor o que acabou literalmente com o fonte (sintaxe de programação em sua maioria são palavras inglesas). A sorte dele foi que o cidadão enviou o fonte a ele antes e ele colocaria o script na distribuição e antes disso ele verificou a tradução do arquivo e constatou que o cara tinha “feito merda”.
+
+Considerações
+
+- Achei formidável o que você esta fazendo e apesar de estar escrevendo meu projeto em C/C++, tenho um monte de scripts LUA traduzidos e não sabia onde enfiar. Agora tenho onde colocá-los e onde eles podem ser úteis a alguém (Assim espero). 
+
+Fala Shadow (el Padrinho)...
+
+Muito obrigado por dar atencao, vlw mesmo.
+
+Sobre as sugestoes todas otimas... como disse, eh teste, a muito tempo acho q ate em algum topico, talvez ainda exista, dei a ideia de substituicao de arquivos, nas ferias arrumei tempo pra colocar em pratica.
+
+A ideia original era criar um servidor com o proprio dsl e rodar um servidor web, com isso roda cgi-lua, percebi que seria mais rapido aprender e conseguir ajuda com php, fiz algumas pesquisas, li alguns tutorias e deu nisso.
+
+1 - Estou disposto a disponibilizar o codigo fonte do php para que possa ser aperfeicoado.
+
+2 - Por motivo de SEGURANCA tambem queria fechar a parte de upload.
+Ex: * Acesso restrito quem fara traducao (mais como selecionar??).
+* Talvez um grupo tb pra avaliar traducoes (arquivos).
+
+- VALIDACAO -
+Como funciona hoje o formulario de upload.
+* Versao do DSL:
+Procura se ja existe versao no repositorio, se naum existir, cria.
+Realmente se cadastrar algo nada haver, vai gerar algo nada haver.
+Correto cadastrar como contido no arquivo: "/usr/share/doc/dsl/release.txt", porque o script le esse arquivo para fazer donload correto da versao.
+
+Vc falou sobre combo_box com as versoes que existem, vc tem ou sabe onde encontrar uma lista como todas (todas).
+
+
+* Caminho:
+Esse por enquanto eh o mais problematico, caminho cadastrado errado, erro, na hora de substituir arquivo.
+certo eh "/caminho1/caminho1/caminho1/" (fundamenta barra "/" no inicio do caminho e fim. Pode ser um label a ser colocado.
+
+* Arquivo:
+Pode ser enviado qualque tipo de arquivo, pois o script vai pegar arquivo traduzido e substituir no caminho cadastrado, um exemplo.
+/usr/share/doc/dsl/getting_started.html (help o hmtl que roda quando inicia dsl)
+se for traduzido e cadastrado corretamente vai ser substituido.
+ex:
+versao: dsl-4.1
+caminho:/usr/share/doc/dsl/
+arquivo: (browser)getting_started.html(alterado)
+
+uma outra pessoa roda o ./dslbr.sh baixa exatamente o q foi alterado no getting_started.html.
+
+**Qual a duvida do arquivo binario??? qual seria????
+
+Realmente, sobre o q vc falou, faz sentido sobre, fazer cagada, por isso acho importante fechar e criar grupos de controle, o problema como foi descrito no inicio e como fazer, talvez com PROJETO centralizado podera acontecer.
+
+Ah, pensei em fazer o script de traducao em MurgaLua, mais devido a alteracao de versao da linguagem em versoes do DSL, resolvi escrever em ShellScript para ser Universal no DSL.
+
+------
+PS: desculpe meu portugues no post ou se naum fui claro, grande parte eh ignorancia e o resto e meu teclado sem pt-BR.
